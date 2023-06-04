@@ -2,7 +2,7 @@
 const fs = require("fs");
 const inquirer =require("inquirer");
 const path = require("path");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./generateMarkdown");
 
 
 // TODO: Create an array of questions for user input
@@ -18,10 +18,9 @@ const questions = [
         message: "What is the purpose and functionality of this project?",
     },
     {
-        type: "checkbox",
+        type: "input",
         name: "license",
         message: "Which license is applicable to this project?",
-        choices: ["none", "MIT", "ISC", "zLib", "ofl-1.1", "ncsa"],
     },
     {
         type: "input",
@@ -40,7 +39,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "full name",
+        name: "name",
         message: "Provide your full name",
     },
     {
@@ -61,10 +60,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((responses) => {
+        console.log("Creating a Professional README.md File. . .");
+        writeToFile("./README.md", generateMarkdown({ ...responses }));
+    });
+}
 
 // Function call to initialize app
 init();
