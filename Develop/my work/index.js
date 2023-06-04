@@ -3,6 +3,8 @@ const fs = require("fs");
 const inquirer =require("inquirer");
 const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown");
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -31,7 +33,31 @@ const questions = [
         name: "technologies",
         message: "What languages or technologies used for this project?",
     },
-    
+    {
+        type: "input",
+        name: "author",
+        message: "What is your Github username?",
+    },
+    {
+        type: "input",
+        name: "full name",
+        message: "Provide your full name",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Provide your email address",
+    },
+    {
+        type: "input",
+        name: "contributors",
+        message: "List any contributors for this project",
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "Provide walkthrough of test if any were used.",
+    },
 ];
 
 // TODO: Create a function to write README file
