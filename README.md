@@ -48,5 +48,8 @@ If you would like to contribute to this project, follow the guidelines listed be
 <br> 4. Push your branch to your forked repository. 
 <br> 5. Submit a pull request.
 
+## Author
+Github: https://github.com/nigeldwatkins
+
 ## License
 This project is licensed under the MIT license.
