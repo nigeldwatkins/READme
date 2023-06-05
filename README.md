@@ -1,5 +1,11 @@
 ## Professional READme Generator
 
+## Preview
+
+In this video I demonstrate how to operate the JavaScript application, To use the application you will need to open the code inside of a code editor I would prefer vs code, once you do so in the folder mywork right click on index.js and select to open that file in the terminal. Once you are inside of the terminal make sure your path is mywork, when this is verified in the terminal type in node index.js and this will start the prompt of questions that will help generate your README. Review the video below to see how to function the application:
+
+<br> Link to Professional README.md Generator: https://drive.google.com/file/d/1YqG3gGUKV8F55UZ-Xm7MQfD7RvmbpNvM/view 
+
 ## Description
 
 This JavaScript application quickly generates a README.md file soley based on the user input. There is a prompt of questions giving to the user about their project and then creates a README file with the provided information.
